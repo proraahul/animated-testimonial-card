@@ -1,0 +1,95 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  background: #eaecf7;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+.card {
+  position: relative;
+  height: 420px;
+  background: #fff;
+  padding: 8px;
+  border-top-left-radius: 70px;
+  border-top-right-radius: 70px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 40px;
+  box-shadow: 0 0 4px #ddd;
+  overflow: hidden;
+}
+.card .card-inside {
+  width: 400px;
+  height: 370px;
+  position: relative;
+  background: #000;
+  background: linear-gradient(180deg, #eaeaea 0%, #f3f3f3 100%);
+  border-radius: 65px;
+  overflow: hidden;
+  transition: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.375);
+}
+.card-inside img{
+    position: absolute;
+    height: 450px;
+    bottom: 0px;
+    top: 0px;
+    right: -80px;
+}
+.text-box {
+    margin: 40px;
+}
+.text-box h2 {
+    color: #303239;
+}
+.text-box h6{
+    font-size: 1rem;
+    font-weight: 500;
+    color: #555555;
+}
+.control-btn {
+    transition: 0.6s cubic-bezier(0.175, 0.885, 0.32, 2.975);
+    cursor: pointer;
+    color: #fff;
+    background: #4664ff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    font-size: 2rem;
+    position: absolute;
+    display: grid;
+    place-items: center;
+    bottom: 20px;
+    left: 20px;
+    box-shadow: 0 6px 12px #a0afff;
+}
+
+.card #check {
+    appearance: none;
+    position: absolute;
+}
+.card #check:checked ~ .card-inside {
+    height: 240px;
+
+}
+.card #check:checked ~ .control-btn {
+    bottom: 38%;
+    transform: rotate(45deg);
+}
+.card .content {
+width: 400px;
+color: #4b4b4b;
+padding: 10px;
+text-align: right;
+margin-top: 30px;
+}
+.rating {
+    color: #ffa903;
+}
+.content p {
+    font-size: 0.9rem;
+    line-height: 1.5rem;
+}
